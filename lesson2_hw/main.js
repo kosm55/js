@@ -3,7 +3,13 @@
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
 let arr=[10, true, 'string', false, 0, 'hello', 3.14, 8, 'dog', 'cat',];
-console.log(arr);
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[4]);
+console.log(arr[5]);
+console.log(arr[6]);
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 let book1={
@@ -181,7 +187,7 @@ if (num1>num2){
 //- є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //    за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy
 //    (хибноподібні, тобто приводиться до false)
-let x1=prompt('5) Ведіть значення змінної');
+let x1=1;
 if (x1 === null || x1 === undefined || x1 === false || x1 === 0 && x1 === "" )
     x1= 'default';
 console.log(x1);
