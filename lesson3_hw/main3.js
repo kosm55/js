@@ -1,28 +1,28 @@
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
-let arr1=[{},{},{},{},{},{},{},{},{},{}]
-for (let i=0; i<arr1.length; i++){
+
+for (let i=0; i<10; i++){
     document.write(`<div>block</div>`)
 }
 
 //----------------------------------------------------
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
-let arr2=['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js', 'c#', 'java']
-for (let i=0; i<arr2.length; i++){
-    document.write(`<div>${[i]} skill ${arr2[i]}</div>`)
+
+for (let i=0; i<10; i++){
+    document.write(`<div>${[i]} text</div>`)
 }
 //----------------------------------------------------
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
-let arr3=[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}];
+
 let i2=0;
-while (i2<arr3.length){
+while (i2<20){
     document.write(`<h1>user info</h1>`)
     i2++;
 }
 //----------------------------------------------------
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
-let arr4=[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}];
+
 let i1=0;
-while (i1<arr4.length){
+while (i1<20){
     document.write(`<h1>user info ${[i1]}</h1>`)
     i1++;
 }
@@ -44,11 +44,24 @@ while (i1<arr4.length){
 //
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 
+
+
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-for (const listOfItem of listOfItems) {
-    document.write(`<ul>
-                        <li>${listOfItem}</li>
-                    </ul>`)}
+document.write(`<ul>`)
+    for (let listOfItem of listOfItems){
+        document.write(`<li>${listOfItem}</li>`)
+    }
+(`</ul>`)
+
+// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+// for (const listOfItem of listOfItems) {
+//
+//     document.write(`<ul>
+//                         <li>${listOfItem}</li>
+//                     </ul>`)}
+
+
+
 
 //----------------------------------------------------
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
@@ -115,14 +128,16 @@ let users = [
 ];
 
 for (const user of users) {
-    if (user.status===true){
+    if (user.status){
         console.log((user.status), (user.name))}
 }
 for (const user of users) {
-    if (user.status===false){
+    if (!user.status){
         console.log((user.status), (user.name))}
 }
 for (const user of users) {
     if (user.age>30){
         console.log(user)}
 }
+
+
