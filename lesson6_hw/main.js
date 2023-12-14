@@ -89,11 +89,9 @@ let sortCoursesAndDurationArray=coursesAndDurationArray.sort((cours1, cours2)=>{
 console.log(sortCoursesAndDurationArray)
 
 // + відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-    let filterCoursesAndDurationArray = coursesAndDurationArray.filter((item) => {
-    if (item.monthDuration>5 ){
-        return true
-    }
-})
+    let filterCoursesAndDurationArray = coursesAndDurationArray.filter((item) => item.monthDuration>5)
+        // return true
+// })
 console.log(filterCoursesAndDurationArray)
 
 // + за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
