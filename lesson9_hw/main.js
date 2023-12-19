@@ -128,12 +128,23 @@ let simpsons = [
     },
 ];
 for (const simpson of simpsons) {
-    let simpsonDiv=document.createElement('div');
-    simpsonDiv.innerText= ` ${simpson.name} ${simpson.surname} ${simpson.age} ${simpson.info}`
+    let simpsonDiv=document.createElement('div')
+    let simpsonDivName=document.createElement('div');
+    simpsonDivName.innerText=simpson.name;
+    let simpsonDivSurname=document.createElement('div');
+    simpsonDivSurname.innerText=simpson.surname;
+    let simpsonDivAge=document.createElement('div');
+    simpsonDivAge.innerText=simpson.age;
+    let simpsonDivInfo=document.createElement('div');
+    simpsonDivInfo.innerText=simpson.info;
     let imgSim=document.createElement('img')
     imgSim.src=simpson.photo;
-    simpsonDiv.classList.add('member')
-    simpsonDiv.appendChild(imgSim)
+    simpsonDivName.classList.add('member')
+    simpsonDivSurname.classList.add('member')
+    simpsonDivAge.classList.add('member')
+    simpsonDivInfo.classList.add('member')
+    imgSim.classList.add('member')
+    simpsonDiv.append(simpsonDivName,simpsonDivSurname, simpsonDivAge, simpsonDivInfo, imgSim)
     document.body.appendChild(simpsonDiv);
 }
 
