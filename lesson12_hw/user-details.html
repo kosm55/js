@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page2</title>
+</head>
+<body>
+
+<h1>page2</h1>
+
+<ul id="main_block"></ul>
+
+<script>
+    let url = new URL(location.href);
+    console.log(url);
+    let userJSON= url.searchParams.get('id');
+
+    let user= JSON.parse(userJSON);
+
+    let ul = document.getElementById('main_block');
+
+
+        for (const key in user) {
+            let li = document.createElement('li')
+                if (typeof user[key]==='object'){
+                    li.innerText = key + ':' + ' ' ;
+                    let ul2=document.createElement('ul');
+                        for (const newKey in user[key]){
+                            let li2=document.createElement('li')
+                                if (typeof user[key][newKey]==='object'){
+                                    li2.innerText = newKey + ':' + ' ' ;
+                                    let ul3=document.createElement('ul');
+                                        for (const newKey2 in user[key][newKey]){
+                                            let li3=document.createElement('li')
+                                            li3.innerText= newKey2 + ':'+' ' + user[key][newKey][newKey2];
+                                            ul3.appendChild(li3)
+                                        }
+                                    li2.appendChild(ul3)
+                                } else{
+                                    li2.innerText = newKey + ':' + ' ' + user[key][newKey];
+                                }
+                            ul2.appendChild(li2)
+                        }
+                    li.appendChild(ul2)
+                }else{
+                    li.innerText = key + ':' + ' ' + user[key];
+                }
+            ul.appendChild(li)
+        }
+
+
+
+
+
+</script>
+</body>
+</html>
