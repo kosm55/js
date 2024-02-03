@@ -1,0 +1,32 @@
+db.users.find ()
+
+db.users.insertOne({car:'bmw', model:'s3', year:2020})
+db.users.find({_id:ObjectId('65afc595447b01781f6d545e')})
+db.users.find({gender:'female', rating:2})
+
+db.users.find(
+    {gender: 'female', rating:2},
+    {age:true, _id:0}
+    )
+
+db.users.find({
+    $or:[
+    {age:22},
+    {rating:5}
+]
+})
+
+db.users.find({age:{$in:[25,36,45]}})
+db.users.find({age:{$nin:[25,36,45]}})
+
+db.users.find({rating:{$gt:2}})
+db.users.find({rating:{$lt:4}})
+db.users.find({rating:{$gte:2}})
+db.users.find({rating:{$lte:2}})
+db.users.find({rating:{$ne:2}})
+
+db.users.find({name:/^a/i})
+db.users.find({name:/a$/i})
+
+
+
